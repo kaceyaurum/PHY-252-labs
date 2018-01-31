@@ -1,0 +1,134 @@
+\documentclass[12pt, twocolumn, titlepage]{article}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath} 
+\pagenumbering{roman}
+
+\title{Working Title: Complex Data Analysis}
+
+\usepackage{authblk}
+\author[1]{Christian Burgoyne}
+\author[1, *]{Kacey Clark}
+\author[1]{Robert Rezvani}
+\author[1]{Kellen Riall}
+
+\affil[1]{Arizona State University, Department of Physics Box 871504, Arizona State University, Tempe, Arizona  85287-1504}
+\affil[*]{Corresponding author, kacey.reidy@gmail.com}
+
+\date{26 January 2018}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Abstract}
+
+\section{Introduction}
+    In the beginning of the 17th century, Galileo Galieli was one of the first scientists to study the behavior of pendulums. His study was concerned with a mass suspended by a string. He noted that the period of a pendulum was proportional to the square-root of the length of the string, and independent of mass and the initial displacement angle. His studies led quickly to the invention of the pendulum clock, which utilized the constant period of a pendulum in order to keep time. There was, however, more to the story of pendulums.
+    30 years after Galileo's observations, Rene Descartes had noted that the period of the pendulum was not entirely independent of its initial displacement; in fact, the disparity between theoretical and actual period grew as the initial angle grew. He did not, however, know why. Christiaan Huygens in 1673, 20 years after Descartes had noted this phenomenon, continued the inquiry into pendulums and published the first book about the behavior of pendulums entitled: \textit{Horologium Oscillatorium}. The English title of this book is translated as: \textit{Pendulum Clocks}. His book revealed the cause of the increasing period of the pendulum. He noted that the motion of the pendulum was best modeled as cyclical, and thus the relationship Galileo had discovered was only accurate for small initial displacements. 
+    Today, simple pendulums are well-understood and modeled using the physicist's favorite tool: Calculus. Should a pendulum be displaced by some angle $\theta_0$ as seen in Figure 1, the mass will oscillate, and in the absence of friction, will continue to do so indefinitely. The torque caused by gravity on this system is defined as the cross product of F, the force of gravity, and R, which in the case of simple pendula is the length of the string. 
+     
+    \begin{equation} \label{torque}
+
+    \tau=mgRsin(\theta)
+
+    \end{equation}
+    
+    Should the angle be small, the small angle theorem can be applied:
+    
+    \begin{equation} \label{smallangle}
+    
+    $sin(\theta) = \theta$ 
+    
+    \end{equation}
+    
+    Thus, the torque caused by gravity can be modeled by:
+    
+    \tau$ = -FRsin(\theta%)
+    
+    The presence of the negative serves only to correct direction, as a clockwise displacement of \theta$ results in a counter-clockwise torque.
+    
+    From this torque, Newton's third law for rotation can be applied:
+    
+    \begin{equation} \label{torque}
+
+    \alphaI = \tau
+    
+    \alpha$I = -FR\theta$
+    
+    \alpha$I + FR\theta$ = 0
+    
+    \end{equation}
+    
+    Remembering $\alpha$ is defined as the second derivative of $\theta$ with respect to time, this becomes a differential equation for which the solution is known:
+        \begin{equation} \label{pendulumnodamp}
+
+    
+    $\theta$(t) = $\theta_0$cos($\omega$t)
+    
+    
+    where
+    
+    $\omega$ = $\sqrt{\frac{lmg}{I}}$
+    \end{equation}
+    
+    This was the cause of the mysterious increase in the period of the pendulum noted by Descarte: for increasing angles, sin($\theta$) becomes increasingly different from $\theta$, and the model breaks down. Unfortunately, the solution to the differential equation involving sin($\theta$) in lieu of $\theta$ is not currently known.
+    
+    Of course, a pendulum does not oscillate indefinitely, friction slowly seeps the kinetic energy from the system. The main source of this friction is air resistance, modeled by the equation:
+    
+    $F_f$ = $\gamma$$v^2$
+    
+    Using Newton's third law a differential equation modeling this dampened pendulum can be written:
+    
+    $F =ma$
+    
+    $F_g -F_f = ma$
+    
+    $mgsin($\theta$) - $\gamma$v^2 = ma$
+    
+    Once again employing the small angle theorem yields
+    
+    $mg$\theta$ - $\gamma$v^2 - ma = 0$
+    
+    Remembering $a$ is the second derivative of position with respect to time, the solution is given as:
+    
+    $x(t) = Ae^{$\gamma$t}cos($\omega$t + $\theta$)
+    
+    where
+    
+    $\gamma$ = $\frac{b}{2m}$
+
+    It is important to note that it is the amplitude, $not$ the period which decays; the period remains constant. This model similarly breaks down for large angles.
+    
+    It is also important to account for the distance of the measuring device from the pendulum system, this can be done by adding another factor to the equation, giving:
+    
+    $x(t) = Ae^(-$\gamma$t)cos($\omega$t + $\theta$) + $\phi$
+    
+\section{Procedure}
+    The experiment was conducted using a pendulum, a motion detector, and Logger Pro was used to collect the data. The pendulum was composed of a metal rod pointed towards the ceiling held in place by a clamp attached to a work table. The rod also had a clamp attached to it at the top that allowed for a XXX meter cotton string to be hung from it. At the base of the string, a Styrofoam sphere with a radius of XXX was attached so that it hovered a few inches above the table. A Vernier motion sensor was then placed 20 cm from with the Styrofoam ball on the same axis and connected to the LabQuest module, which in turn was connected to a computer. To calibrate the motion sensor, the air temperature was measured to be XXX using a wall mounted thermometer, and this value was input into the sensor’s external temperature parameter using LoggerPro. The sampling rate was also set to 20 Hz and the collection time was set to be 100 seconds, meaning the sensor would take 20 measurements a second for 100 seconds.
+
+    To collect the data, the ball was pulled back from the sensor on the same axis roughly 30 degrees and let go. After the pendulum completed one full period, the sensor began taking data, measuring the displacement of the Styrofoam ball in damped simple harmonic motion over time.
+    \begin{figure}[h]
+        \includegraphics[width=0.5\textwidth]{PHY_252_Lab_1_Apparatus_2.png}
+        
+        \centering
+    \end{figure}
+
+\section{Results}
+
+\section{Discussion}
+
+\section{Conclusion}
+
+\section{Works Cited}
+
+\section{Acknowledgements}
+
+We would like to express our greatest thanks to our teaching assistant Joe Lesnefsky for his instruction and assistance in this lab, Professor Rizal Hariadi for his teaching, the Physics Instructional Resource Team (PIRT) for providing the setup and equipment for this lab, Professor Cynthia Keeler for her tutelage in mathematics, Dr. Richard Jacob for his tutorial of mathematical methods in physics, Ian Kenney for his advice in the writing of this paper, former President Barack Obama for the continued funding of our education, and Dr. David Dotson and Dr. Oliver Beckstein for their guidance.
+
+\section{Appendix}
+
+\end{document}
